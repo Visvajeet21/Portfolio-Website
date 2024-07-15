@@ -1,0 +1,106 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 100px 0 10px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.aboutItems {
+  display: flex;
+  /* flex-direction: column; */ /*To display in rows*/
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+  color: var((--color-text));
+  gap: 50px;
+  /*justify-content: space-between;*/ /*To display hobbies in row fashion with equal spacing between them*/
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-robot);
+  text-transform: uppercase;
+}
+
+.title1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 33px;
+  font-family: var(--font-robot);
+  margin-top: 30px;
+}
+
+.list {
+  font-size: 20px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 20px 50px 20px 50px;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(165, 215, 232, 0.42) 10%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+/* .paintIcon {
+  display: flex;
+  align-items: flex-end;
+  width: 20%;
+  z-index: 1;
+} */
+
+.description {
+  display: flex;
+  align-items: flex-start;
+  font-size: 25px;
+  font-family: var(--font-robot);
+  margin-bottom: 40px;
+}
+
+/* To make responsive */
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .content {
+    align-items: center;
+  }
+}
+
+/* Image floating transformation */
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
